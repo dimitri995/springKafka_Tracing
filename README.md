@@ -32,3 +32,15 @@ java -jar target/consumer-0.0.1-SNAPSHOT.jar
 
 mvn clean package
 ```
+#### Output
+
+##### post a message via swagger ui
+![capture 1](https://github.com/anicetkeric/spring-kafka-integration/blob/master/screens/swagger.png)
+
+
+##### produce message
+![capture 2](https://github.com/anicetkeric/spring-kafka-integration/blob/master/screens/producer.png)
+
+
+##### consume message
+![capture 3](https://github.com/anicetkeric/spring-kafka-integration/blob/master/screens/consumer.png)
