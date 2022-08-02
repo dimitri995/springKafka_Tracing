@@ -1,6 +1,5 @@
-package com.aek.kafka.consumer.listener;
+package com.spart.kafka.consumer.listener;
 
-import com.aek.kafka.consumer.model.BankTransaction;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 //import io.opentelemetry.api.trace.Span;
@@ -19,11 +18,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class Consumer {
 
-    private static final ObjectMapper mapper = new ObjectMapper();
-
-    @Autowired
-    private ContainerCustomizer listenerCustomizer;
-    @KafkaListener(topics = "transaction", groupId = "transaction-group-id", containerFactory = "kakfaListenerContainerFactory")
+    @KafkaListener(topics = "tracing", groupId = "tracing-group-id", containerFactory = "kakfaListenerContainerFactory")
     public void listenSenderEmail(String data) {
         log.info("Consumed message: " + data);
     }

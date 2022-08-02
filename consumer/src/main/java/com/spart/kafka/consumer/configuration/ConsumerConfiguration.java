@@ -1,4 +1,4 @@
-package com.aek.kafka.consumer.configuration;
+package com.spart.kafka.consumer.configuration;
 
 import io.opentelemetry.api.OpenTelemetry;
 import io.opentelemetry.instrumentation.spring.kafka.v2_7.SpringKafkaTelemetry;
@@ -34,6 +34,7 @@ public class ConsumerConfiguration {
 
     @Autowired
     OpenTelemetry openTelemetry;
+    
     @Bean
     public ConsumerFactory<String, String> consumerFactory(){
         Map<String,Object> config=new HashMap<>();

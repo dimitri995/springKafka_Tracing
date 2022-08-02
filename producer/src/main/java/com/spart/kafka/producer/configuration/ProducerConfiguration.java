@@ -1,4 +1,4 @@
-package com.aek.kafka.producer.configuration;
+package com.spart.kafka.producer.configuration;
 
 
 import io.opentelemetry.api.GlobalOpenTelemetry;
@@ -15,6 +15,7 @@ import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import org.apache.kafka.common.serialization.StringSerializer;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.autoconfigure.condition.ConditionalOnMissingBean;
 import org.springframework.boot.autoconfigure.kafka.DefaultKafkaProducerFactoryCustomizer;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -38,8 +39,9 @@ public class ProducerConfiguration {
         this.env = env;
     }
 
-    @Autowired
-    OpenTelemetry openTelemetry;
+    // @Autowired
+    // OpenTelemetry openTelemetry;
+    
     @Bean
     public Map<String, Object> producerConfigs() {
         Map<String, Object> props = new HashMap<>();
@@ -58,7 +60,7 @@ public class ProducerConfiguration {
     }
 
     @Bean
-    public  ProducerFactory<Integer, String> producerFactory() {
+    public ProducerFactory<String, String> producerFactory() {
         DefaultKafkaProducerFactory defaultKafkaProducerFactory = new DefaultKafkaProducerFactory<>(producerConfigs());
 //        producerFactoryCustomizer().customize(defaultKafkaProducerFactory);
         return  defaultKafkaProducerFactory;
@@ -72,7 +74,7 @@ public class ProducerConfiguration {
 //    }
 
     @Bean
-    public KafkaTemplate<Integer, String> kafkaTemplate() {
+    public KafkaTemplate<String, String> kafkaTemplate() {
         return new KafkaTemplate<>(producerFactory());
     }
 

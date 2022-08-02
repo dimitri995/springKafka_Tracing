@@ -11,9 +11,9 @@ springdoc:
     enabled: true
     path: /api-docs
   swagger-ui:
-    path: /swagger-ui.html
+    path: /api
 
 producer:
   kafka:
-    topic-name: transaction
+    topic-name: tracing
 
