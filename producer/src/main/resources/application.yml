@@ -16,3 +16,4 @@ springdoc:
 producer:
   kafka:
     topic-name: transaction
+
