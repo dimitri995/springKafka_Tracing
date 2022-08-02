@@ -1,7 +1,7 @@
 # spring-kafka-integration
 
 ##### Architecture
-![capture 1](https://github.com/dimitri995/springKafka_Tracing/img/archi.png)
+(https://github.com/dimitri995/springKafka_Tracing/blob/dd3d87e12be78da348aa708748f04d2bcadee64d/img/archi.png)
 
 ### Prerequisites
 - JDK 1.8
@@ -31,4 +31,4 @@ Go to http://localhost:8082/api and post a message via swagger ui.
 
 
 ##### tracing kafka message with Zipkin
-![capture 2](https://github.com/dimitri995/springKafka_Tracing/img/zipkin.png)
+(https://github.com/dimitri995/springKafka_Tracing/blob/dd3d87e12be78da348aa708748f04d2bcadee64d/img/zipkin.png)
