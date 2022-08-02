@@ -12,9 +12,6 @@ receivers:
     protocols:
       grpc:
         endpoint: 0.0.0.0:4320
-      tls:
-        cert_file: /home/dimitri/dev/spring-kafka-integration/producer/security/cert.pem
-        key_file: /home/dimitri/dev/spring-kafka-integration/producer/security/cert-key.pem
       http:
 
 #Possible to process data with processors
@@ -62,10 +59,10 @@ exporters:
 
   # Data sources: traces
   # Test to store trace in kafka like a database.
-  # kafka:
-  #   protocol_version: 2.0.0
-  #   brokers: [ "broker:29092" ]
-  #   topic: "traceOtel"
+  kafka:
+    protocol_version: 2.0.0
+    brokers: [ "broker:29092" ]
+    topic: "traceOtel"
 
   # Data sources: traces
   jaeger:
