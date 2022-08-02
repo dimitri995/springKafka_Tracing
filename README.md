@@ -31,4 +31,4 @@ Go to http://localhost:8082/api and post a message via swagger ui.
 
 
 ##### tracing kafka message with Zipkin
-![capture 2](https://github.com/dimitri995/springKafka_Tracing/blob/dd3d87e12be78da348aa708748f04d2bcadee64d/img/zipkin.png)
+![capture 2](https://github.com/dimitri995/springKafka_Tracing/blob/master/img/zipkin.png)
