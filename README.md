@@ -1,5 +1,8 @@
 # spring-kafka-integration
 
+##### Architecture
+![capture 1](https://github.com/dimitri995/springKafka_Tracing/img/archi.png)
+
 ### Prerequisites
 - JDK 1.8
 - Maven 3.x
@@ -24,13 +27,8 @@ java -jar target/consumer-0.0.1-SNAPSHOT.jar
 ```
 #### Output
 
-##### post a message via swagger ui
-![capture 1](https://github.com/anicetkeric/spring-kafka-integration/blob/master/screens/swagger.png)
+Go to http://localhost:8082/api and post a message via swagger ui.
 
 
-##### produce message
-![capture 2](https://github.com/anicetkeric/spring-kafka-integration/blob/master/screens/producer.png)
-
-
-##### consume message
-![capture 3](https://github.com/anicetkeric/spring-kafka-integration/blob/master/screens/consumer.png)
+##### tracing kafka message with Zipkin
+![capture 2](https://github.com/dimitri995/springKafka_Tracing/img/zipkin.png)
